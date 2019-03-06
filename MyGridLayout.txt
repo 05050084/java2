@@ -1,0 +1,52 @@
+import java.awt.*;
+import java.awt.event.*;
+ 
+public class MyGridLayout extends java.awt.Frame {
+    public static void main(String[] args) {
+        new MyGridLayout();
+    }
+     
+    public MyGridLayout() {
+        Frame frame = new Frame("Grid Layout");
+        frame.addWindowListener(new AdapterDemo());
+        frame.setLayout(new GridLayout(4, 3));
+         
+        Button b1 = new Button("0,0");
+        Button b2 = new Button("0,1");
+        Button b3 = new Button("0,2");
+		 Button b4 = new Button("1,0");
+        Button b5 = new Button("1,1");
+        Button b6 = new Button("1,2");
+		 Button b7 = new Button("2,0");
+        Button b8 = new Button("2,1");
+        Button b9 = new Button("2,2");
+		Button b10 = new Button("3,0");
+		Button b11= new Button("3,1");
+		Button b12 = new Button("3,2");
+		
+		this.setSize(300, 300);
+		
+        frame.add(b1);
+        frame.add(b2);
+        frame.add(b3);
+        frame.add(b4);
+		 frame.add(b5);
+        frame.add(b6);
+        frame.add(b7);
+        frame.add(b8);
+		 frame.add(b9);
+        frame.add(b10);
+        frame.add(b11);
+        frame.add(b12);
+   
+         this.setSize(300, 300);
+        frame.pack();
+        frame.setVisible(true);
+    }    
+}
+ 
+class AdapterDemo extends WindowAdapter {
+    public void windowClosing(WindowEvent e) {
+        System.exit(0);
+    }
+}
